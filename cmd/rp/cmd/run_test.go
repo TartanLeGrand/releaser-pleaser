@@ -85,6 +85,11 @@ func Test_parseUpdaters(t *testing.T) {
 			want:  []string{"bar", "changelog", "generic"},
 		},
 		{
+			name:  "add helmchart entry",
+			input: []string{"helmchart"},
+			want:  []string{"changelog", "generic", "helmchart"},
+		},
+		{
 			name:  "duplicates are removed",
 			input: []string{"bar", "bar", "changelog"},
 			want:  []string{"bar", "changelog", "generic"},
